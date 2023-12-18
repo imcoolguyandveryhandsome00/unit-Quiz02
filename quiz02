@@ -1,0 +1,26 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+public class QuizOneJunitTest {
+   @Test
+   public void testSquare() {
+       QuizOneJunit quiz = new QuizOneJunit();
+       int result = quiz.square(5);
+       Assertions.assertEquals(25, result);
+   }
+   @Test
+   public void testCountLetterA() {
+       QuizOneJunit quiz = new QuizOneJunit();
+       int result = quiz.countLetterA("Apples are Awesome");
+       Assertions.assertEquals(3, result);
+   }
+   @Test
+   public void testCheckTwoLetter() {
+       QuizOneJunit quiz = new QuizOneJunit();
+       boolean result1 = quiz.checkTwoLetter("hello");
+       boolean result2 = quiz.checkTwoLetter("abab");
+       boolean result3 = quiz.checkTwoLetter("ba");
+       Assertions.assertFalse(result1);
+       Assertions.assertTrue(result2);
+       Assertions.assertTrue(result3);
+   }
+}
